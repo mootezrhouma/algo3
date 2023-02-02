@@ -1,0 +1,90 @@
+PROCEDURE (VAR v1: vector_of INTEGER, n:INTEGER);
+VAR
+PS: FLOAT;
+i,j : INTEGER;
+
+BEGIN
+read (V1);
+read (V2);
+FOR i FROM 0 TO n-1 STEP step  DO
+FOR j FROM 0 TO v2.length STEP 1  DO
+   IF (i=j) THEN
+    ps := ps + V1[i] * V2[i];
+END_IF
+END_FOR
+ RETURN PS;
+END
+
+ALGORITHM Dotproduct
+VAR
+    i,j: INTEGER;
+    ps : FLOAT ; 
+
+    V1 : ARRAY_OF FLOAT[I];
+    V2 : ARRAY_OF FLOAT[J];
+BEGIN
+    read(I);
+    read(J);
+
+
+    FOR i FROM 0 TO n-1 STEP step  DO
+    read(V1[i]);
+
+    read(V2[J]);
+    END_FOR
+
+ dot_product
+  (ps,V1,V2);
+
+    IF (ps=0) THEN
+     write("The two vectors are orthogonal");
+    ELSE
+        write("The two vectors are not orthogonal");
+    END_IF
+
+
+END
+
+
+dot_product(V1,V2) :  ARRAY_OF FLOAT[2])
+
+VAR
+   i,j: INTEGER;
+    ps : FLOAT := 0;
+i,j: INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP step  DO
+    FOR j FROM 0 TO v2.length STEP 1  DO
+    IF (i=j) THEN
+    ps := ps + V1[i] * V2[j];
+  end if
+    END_FOR
+    RETURN ps ;
+END
+
+ALGORITHM Dotproduct (v1,v2 : ARRAY_OF FLOAT[2])
+VAR
+    i,j: INTEGER;
+    PS : FLOAT;
+
+BEGIN
+
+    read(j);
+
+    FOR i FROM 0 TO n-1 STEP step  DO
+   FOR j FROM 0 TO v2.length STEP 1  DO
+     IF (i=j) THEN
+    PS := PS + ( v1[i] * v2[j] );
+
+    read (v1);
+
+    read (v2);
+    END_FOR
+
+    dotprod := dot_product (v1,v2);
+    IF (dotprod=0) THEN
+        write("The two vectors are orthogonal");
+    ELSE
+        write("The two vectors are not orthogonal");
+    END_IF
+END
